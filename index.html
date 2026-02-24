@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore - Akıllı Saat</title>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2VB7PK8');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+body { font-family: Arial; margin:0; background:#f4f4f4; }
+header { background:black; color:white; padding:15px; text-align:center; }
+.container { padding:20px; }
+.product { background:white; padding:20px; border-radius:8px; }
+.price { font-size:24px; color:green; margin:10px 0; }
+button { padding:12px 20px; border:none; border-radius:6px; cursor:pointer; margin-top:10px; }
+.add { background:orange; color:white; }
+.buy { background:green; color:white; }
+form { margin-top:20px; background:#fff; padding:15px; border-radius:8px; }
+input { width:100%; padding:10px; margin:8px 0; }
+</style>
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2VB7PK8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+<h1>TechStore</h1>
+</header>
+
+<div class="container">
+<div class="product">
+<h2>Akıllı Saat X Pro</h2>
+<p>Kalp atış ölçer, GPS, su geçirmez, 7 gün batarya.</p>
+<div class="price">4.999 TL</div>
+
+<button id="addToCartBtn" class="add">Sepete Ekle</button>
+<button id="buyNowBtn" class="buy">Hemen Satın Al</button>
+</div>
+
+<form id="checkoutForm">
+<h3>Ödeme Bilgileri</h3>
+<input type="text" placeholder="Ad Soyad" required>
+<input type="email" placeholder="E-Posta" required>
+<input type="tel" placeholder="Telefon" required>
+<button type="submit">Satın Alımı Tamamla</button>
+</form>
+</div>
+
+<script>
+document.getElementById("checkoutForm").addEventListener("submit", function(e){
+e.preventDefault();
+window.location.href = "thank-you.html";
+});
+</script>
+
+</body>
+</html>
